@@ -30,8 +30,8 @@ namespace QLNTBTL
         private void InitializeComponent()
         {
             this.grddataLoaiThuoc = new System.Windows.Forms.DataGridView();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtMaLoaiT = new System.Windows.Forms.TextBox();
+            this.txtTenLoaiThuoc = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.btnThem = new System.Windows.Forms.Button();
@@ -49,20 +49,22 @@ namespace QLNTBTL
             this.grddataLoaiThuoc.Name = "grddataLoaiThuoc";
             this.grddataLoaiThuoc.Size = new System.Drawing.Size(776, 255);
             this.grddataLoaiThuoc.TabIndex = 0;
+            this.grddataLoaiThuoc.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grddataLoaiThuoc_CellContentClick);
+            this.grddataLoaiThuoc.Click += new System.EventHandler(this.grddataLoaiThuoc_Click);
             // 
-            // textBox1
+            // txtMaLoaiT
             // 
-            this.textBox1.Location = new System.Drawing.Point(122, 33);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 1;
+            this.txtMaLoaiT.Location = new System.Drawing.Point(122, 33);
+            this.txtMaLoaiT.Name = "txtMaLoaiT";
+            this.txtMaLoaiT.Size = new System.Drawing.Size(100, 20);
+            this.txtMaLoaiT.TabIndex = 1;
             // 
-            // textBox2
+            // txtTenLoaiThuoc
             // 
-            this.textBox2.Location = new System.Drawing.Point(122, 79);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 2;
+            this.txtTenLoaiThuoc.Location = new System.Drawing.Point(122, 79);
+            this.txtTenLoaiThuoc.Name = "txtTenLoaiThuoc";
+            this.txtTenLoaiThuoc.Size = new System.Drawing.Size(100, 20);
+            this.txtTenLoaiThuoc.TabIndex = 2;
             // 
             // label1
             // 
@@ -139,11 +141,12 @@ namespace QLNTBTL
             this.Controls.Add(this.btnThem);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtTenLoaiThuoc);
+            this.Controls.Add(this.txtMaLoaiT);
             this.Controls.Add(this.grddataLoaiThuoc);
             this.Name = "FrmLoaiThuoc";
             this.Text = "FrmLoaiThuoc";
+            this.Load += new System.EventHandler(this.FrmLoaiThuoc_Load);
             ((System.ComponentModel.ISupportInitialize)(this.grddataLoaiThuoc)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -153,8 +156,8 @@ namespace QLNTBTL
         #endregion
 
         private System.Windows.Forms.DataGridView grddataLoaiThuoc;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtMaLoaiT;
+        private System.Windows.Forms.TextBox txtTenLoaiThuoc;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnThem;
